@@ -1,0 +1,22 @@
+.cart-enter {
+    transform: translateX(100%);
+    &.cart-enter-active {
+      transform: translateX(0);
+      transition: transform .4s ease;
+    }
+}
+  
+.cart-exit {
+  transform: translateX(0);
+  &.cart-exit-active {
+    transform: translateX(100%);
+    transition: transform .4s ease;
+  }
+}
+
+.cart-enter,
+.cart-enter-done,
+.cart-exit,
+.cart-exit-active {
+  display: block;
+}

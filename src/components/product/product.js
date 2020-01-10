@@ -1,24 +1,39 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addToCart } from '../../actions/index'
+import { addToCart } from '../../actions/index';
+import { showOverlay } from '../../actions/index';
+import { openCart } from '../../actions/index';
+import './product.scss';
 
 const Product = (props) => {
     const prod = props.product;
-    const {dispatch} = props;
+    const { addToCart, showOverlay, openCart } = props;
+
+    const handleAddToCartClick = product => {        
+        addToCart(product);
+        openCart();
+        showOverlay();
+    }
+
     return (
-        <div className="col-xs-12 col-md-3 card mb-4">
-            <img src={`/assets/images/${prod.filename}`} className="card-img-top" alt="..."/>
-            <div className="card-body">
-                <h5 className="card-title">{prod.title}</h5>
-                <p className="card-text">{prod.description}</p>
-                <button className="btn btn-primary" onClick={() => dispatch(addToCart(prod))}>Add to Cart</button>
+        <div className="col-xs-12 col-md-4 card mb-4">
+            <div className="card__wrapper d-flex flex-column shadow-sm rounded p-2">
+                <div className="card__img">
+                    <img src={`/assets/images/${prod.filename}`} className="card-img-top" alt="..."/>
+                </div>
+                <div className="card-body d-flex flex-column">
+                    <h5 className="card-title">{prod.title}</h5>
+                    <p className="card-text">{prod.description}</p>
+                    <button className="card-btn btn btn-primary" onClick={() => handleAddToCartClick(prod)}>Add to Cart</button>
+                </div>
             </div>
         </div>
     )
 }
 
-const mapStateToProps = state => ({
-    products : state.products
+const mapDispatchToprops = dispatch => ({
+    addToCart: item => dispatch(addToCart(item)),
+    showOverlay: () => dispatch(showOverlay()),
+    openCart: () => dispatch(openCart()),
 })
-
-export default connect(mapStateToProps)(Product);
+export default connect(null,mapDispatchToprops)(Product);

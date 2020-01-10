@@ -1,5 +1,6 @@
 const initState = {
-    products : []
+    products: [],
+    // isCartOpen: false,
 }
 export const addToCart = (state = initState, action) => {
     switch(action.type) {
@@ -8,7 +9,8 @@ export const addToCart = (state = initState, action) => {
             newProducts.push(action.playload);
             return {
                 ...state,
-                products: newProducts
+                products: newProducts,
+                // isCartOpen: true
             }
         default: 
             return state;

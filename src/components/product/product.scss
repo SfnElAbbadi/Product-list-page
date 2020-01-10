@@ -1,0 +1,15 @@
+.card {
+    &__img {
+        width: 50%;
+        margin: auto;
+    }
+    &-btn {
+        width: 100%;
+    }
+    &-text {
+        flex: 1;
+    }
+    &__wrapper {
+        height: 100%;
+    }
+}

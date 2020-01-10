@@ -1,9 +1,27 @@
 .cart {
-    position: fixed;
-    background-color: green;
     width: 400px;
-    z-index: 200;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background-color: #fff;
     top: 0;
     right: 0;
-    height: 100%;
+    z-index: 200;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    &__footer {
+        height: 100px;
+        &-btn {
+            width: 100%;
+        }
+        .checkout__btn {
+            width: 100%;
+        }
+    }
+}
+.cart--is-open {
+    z-index: 200;
 }
