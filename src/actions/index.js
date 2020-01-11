@@ -3,6 +3,11 @@ export const addToCart = product => ({
     playload: product
 });
 
+export const removeFromCart = productTitle => ({
+    type: 'REMOVE_FROM_CART',
+    playload: productTitle
+});
+
 export const hideOverlay = () => ({
     type: 'HIDE_OVERLAY'
 });
