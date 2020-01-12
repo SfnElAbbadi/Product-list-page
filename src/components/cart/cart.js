@@ -22,7 +22,7 @@ const Cart = (props) => {
     let totalPrice = 0;
 
     if(Object.entries(products).length !== 0) {
-        totalPrice = Object.values(products).reduce(((acc, { price }) => acc + price), 0);
+        totalPrice = Object.values(products).reduce(((acc, { price, quantity }) => acc + price * quantity ), 0);
     }
 
     return (

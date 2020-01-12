@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Rating from './rating/rating';
 import { addToCart } from '../../actions/index';
 import { showOverlay } from '../../actions/index';
 import { openCart } from '../../actions/index';
@@ -24,6 +25,8 @@ const Product = (props) => {
                 <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{prod.title}</h5>
                     <p className="card-text">{prod.description}</p>
+                    <Rating rating={prod.rating}/>
+                    <p className="card__price d-flex justify-content-center font-weight-bold">${prod.price}</p>
                     <button className="card-btn btn btn-primary" onClick={() => handleAddToCartClick(prod)}>Add to Cart</button>
                 </div>
             </div>
