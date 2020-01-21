@@ -59,7 +59,7 @@ const cartFooter = (totalPrice) => {
 
 const mapStateToProps = state => ({
     products : state.cart.products,
-    isCartOpen : state.handleCart.isCartOpen
+    isCartOpen : state.cart.isCartOpen
 })
 
 const mapDispatchToprops = dispatch => ({

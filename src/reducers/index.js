@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
-import { addToCart } from './products';
 import { overlay } from './overlay';
-import { handleCart } from './cart';
+import cart from './cart';
+import common from './common'
 
 const rootReducer = combineReducers({
-    cart: addToCart,
+    // cart: addToCart,
     overlay: overlay,
-    handleCart: handleCart
+    // handleCart: handleCart
+    cart,
+    common,
 });
 
 export default rootReducer;

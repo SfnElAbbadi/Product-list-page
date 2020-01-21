@@ -34,7 +34,7 @@ function App(props) {
 }
 
 const mapStateToProps = state => ({
-  isCartOpen: state.handleCart.isCartOpen,
+  isCartOpen: state.cart.isCartOpen,
   isShown: state.overlay.isShown
 })
 
