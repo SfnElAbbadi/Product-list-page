@@ -20,7 +20,7 @@ const Product = (props) => {
         <div className="col-xs-12 col-md-4 card mb-4">
             <div className="card__wrapper d-flex flex-column shadow-sm rounded p-2">
                 <div className="card__img">
-                    <img src={`/assets/images/${prod.filename}`} className="card-img-top" alt="..."/>
+                    <img src={`${process.env.PUBLIC_URL}/assets/images/${prod.filename}`} className="card-img-top" alt="..."/>
                 </div>
                 <div className="card-body d-flex flex-column">
                     <h5 className="card-title">{prod.title}</h5>
