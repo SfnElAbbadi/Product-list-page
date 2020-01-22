@@ -14,11 +14,11 @@ function FilterTitle(props) {
 
     return (
         <div className="filter__title mt-3 pb-3">
-            <div className="filter__title-header d-flex justify-content-between align-items-center mb-3" data-toggle="collapse" data-target=".filter__title-body">
+            <div className="filter__title-header d-flex justify-content-between align-items-center" data-toggle="collapse" data-target=".filter__title-body">
                 <span className="font-weight-bold">Title</span>
                 <span><FontAwesomeIcon icon={faChevronDown}/></span>
             </div>
-            <div className="filter__title-body collapse">
+            <div className="filter__title-body collapse mt-3">
                 <input onChange={(e) => setTitle(e.target.value)} type="text" className="form-control" placeholder="Product title" aria-label="Username" aria-describedby="basic-addon1" />
             </div>
         </div>

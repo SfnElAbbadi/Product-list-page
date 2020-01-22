@@ -17,7 +17,7 @@ function Filter() {
 }
 
 const header = () => (
-    <div className="filter__header">
+    <div className="filter__header pb-2">
         <span className="navbar-brand mb-0 h1 font-weight-bold">Filter</span>
     </div>
 )

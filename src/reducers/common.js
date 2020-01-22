@@ -7,15 +7,12 @@ export default (state = initState, action) => {
 
     switch(action.type) {
         case 'FILTER_BY_TITLE':
-            console.log('FILTER_BY_TITLE',action);
             if(action.playload !== '') {
                 return filterProductsByTitle(state, {newProducts, title: action.playload});
             } else {
                 return state;
             }
-        case 'SET_PRODUCT_LIST':
-            console.log(action);
-            
+        case 'SET_PRODUCT_LIST':            
             return {
                 ...state,
                 productList: action.playload
@@ -27,11 +24,7 @@ export default (state = initState, action) => {
 }
 
 const filterProductsByTitle = (state, {newProducts, title}) => {
-    console.log(title);
-
-    newProducts = newProducts.filter(item => item.title.includes(title));
-    console.log(state);
-    
+    newProducts = newProducts.filter(item => item.title.includes(title));    
     return {
         ...state,
         productList: newProducts,
