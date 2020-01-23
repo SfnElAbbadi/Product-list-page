@@ -21,6 +21,9 @@
             width: 100%;
         }
     }
+    @media (max-width: 768px) { 
+        width: 100%;
+    }
 }
 .cart--is-open {
     z-index: 200;

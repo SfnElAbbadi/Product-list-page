@@ -10,10 +10,10 @@ function CartProduct(props) {
     return (
         <div className="cart__product card mb-3">
             <div className="row no-gutters align-items-center">
-                <div className="col-md-2 d-flex align-items-center">
+                <div className="col-2 d-flex align-items-center">
                     <img src={`${process.env.PUBLIC_URL}/assets/images/${product.filename}`} className="card-img" alt={product.filename} />
                 </div>
-                <div className="product__info col-md-10 flex-grow-1">
+                <div className="product__info col-10 flex-grow-1">
                     <div className="card-body">
                         <h5 className="card-title">{product.title}</h5>
                         <p className="card-text">
